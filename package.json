@@ -1,0 +1,41 @@
+{
+    "name": "billing-app",
+    "version": "1.0.0",
+    "description": "Billing App for Grocery SHOp",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "start-node": "nodemon main.js",
+        "rebuild": "electron-rebuild -f -w sqlite3",
+        "package-all": "electron-packager . billing-app --platform=win32 --arch=ia32",
+        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+        "package-win": "electron-packager . billing-app --overwrite --asar --platform=win32 --arch=all --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shopping List\"",
+        "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/vj_mathew/rsm-billing-app.git"
+    },
+    "author": "VJ, HemaDeva",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "electron": "^5.0.2",
+        "escpos": "^2.5.2",
+        "express": "^4.17.1",
+        "node-pre-gyp": "^0.13.0",
+        "sqlite3": "^4.1.0",
+        "wkhtmltopdf": "^0.3.4"
+    },
+    "devDependencies": {
+        "electron-builder": "^21.1.5",
+        "electron-packager": "^14.0.6",
+        "electron-rebuild": "^1.8.5",
+        "nodemon": "^1.19.2"
+    },
+    "bugs": {
+        "url": "https://gitlab.com/vj_mathew/rsm-billing-app/issues"
+    },
+    "homepage": "https://gitlab.com/vj_mathew/rsm-billing-app#readme"
+}
