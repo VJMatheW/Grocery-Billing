@@ -21,7 +21,7 @@
     "license": "ISC",
     "dependencies": {
         "cors": "^2.8.5",
-        "electron": "^5.0.2",
+        "electron": "^9.1.0",
         "escpos": "^2.5.2",
         "express": "^4.17.1",
         "node-pre-gyp": "^0.13.0",
